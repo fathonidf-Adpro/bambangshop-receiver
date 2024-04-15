@@ -68,16 +68,16 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement list_all_as_string function in Notification repository.`
     -   [x] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
 -   **STAGE 3: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Commit: `Implement receive_notification function in Notification service.`
-    -   [ ] Commit: `Implement receive function in Notification controller.`
-    -   [ ] Commit: `Implement list_messages function in Notification service.`
-    -   [ ] Commit: `Implement list function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+    -   [x] Commit: `Create Notification service struct skeleton.`
+    -   [x] Commit: `Implement subscribe function in Notification service.`
+    -   [x] Commit: `Implement subscribe function in Notification controller.`
+    -   [x] Commit: `Implement unsubscribe function in Notification service.`
+    -   [x] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [x] Commit: `Implement receive_notification function in Notification service.`
+    -   [x] Commit: `Implement receive function in Notification controller.`
+    -   [x] Commit: `Implement list_messages function in Notification service.`
+    -   [x] Commit: `Implement list function in Notification controller.`
+    -   [x] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -95,3 +95,15 @@ Saya memilih menggunakan **Read Write Lock** daripada **Mutex** karena perlu men
 Dalam Rust, fitur `lazy_static` memungkinkan pembuatan variabel **singleton**, yang hanya memiliki satu instance dalam program dan tetap `immutable` sepanjang program berjalan, mengamankan thread saat melakukan **multi threading**. Berbeda dengan Java, di mana variabel `static` dapat diubah nilainya, dalam Rust, variabel `static` dibuat immutable agar **thread-safe**, menekankan pentingnya thread-safe programming dalam Rust.
 
 #### Reflection Subscriber-2
+
+>1. Have you explored things outside of the steps in the tutorial, for example: src/lib.rs? If not, explain why you did not do so. If yes, explain things that you have learned from those other parts of code.
+
+`src/lib.rs` adalah file utama dalam proyek Rust yang digunakan untuk mendefinisikan modul dan fungsi-fungsi yang dapat diakses secara luas, serta sebagai titik awal eksekusi ketika proyek digunakan sebagai library. Dalam file ini, kita mengkonfigurasi aplikasi, termasuk pembuatan variabel untuk nama port, URL, dan memastikan pengaturan file `.env` sudah benar.
+
+>2. Since you have completed the tutorial by now and have tried to test your notification system by spawning multiple instances of Receiver, explain how Observer pattern eases you to plug in more subscribers. How about spawning more than one instance of Main app, will it still be easy enough to add to the system?
+
+Dalam pola Observer, penambahan subscriber baru menjadi lebih mudah karena daftar subscriber sudah ada. Namun, menambahkan lebih dari satu instance dari aplikasi utama mungkin memerlukan pertimbangan tambahan dan penanganan yang lebih kompleks.
+
+>3. Have you tried to make your own Tests, or enhance documentation on your Postman collection? If you have tried those features, tell us whether it is useful for your work (it can be your tutorial work or your Group Project).
+
+Untuk sekarang, saya belum sempat untuk membuat testing atau mengubah dokumentasi Postman Collection
